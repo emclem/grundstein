@@ -1,0 +1,9 @@
+#slideshow {
+	height: 600px;
+	width: 100%;
+	background: #ffeede;
+	position: relative;
+	top: 108px;
+	margin-bottom: 170px;
+	z-index: -1;
+}
