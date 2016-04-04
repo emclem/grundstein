@@ -1,313 +1,367 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Grundstein</title>
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" type="text/css" href="style/default.css">
-	<link rel="stylesheet" type="text/css" href="style/slide.css">
-	<link rel="stylesheet" href="style/example.css">
- 	<link rel="stylesheet" href="style/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+	<link href="css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="stylesheet" href="css/typography.css">
+	<script type="text/javascript" src="js/respond.js"></script>
+
+
 </head>
-
-
-
-
-
-
-
-
-
-
-  <style>
-    body {
-      -webkit-font-smoothing: antialiased;
-      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #232525;
-      padding-top:0px;
-    }
-
-    #slides {
-      display: none
-    }
-
-    #slides .slidesjs-navigation {
-      margin-top:5px;
-    }
-
-    a.slidesjs-next,
-    a.slidesjs-previous,
-    a.slidesjs-play,
-    a.slidesjs-stop {
-      background-image: url(img/btns-next-prev.png);
-      background-repeat: no-repeat;
-      display:block;
-      width:12px;
-      height:18px;
-      overflow: hidden;
-      text-indent: -9999px;
-      float: left;
-      margin-right:5px;
-    }
-
-    a.slidesjs-next {
-      margin-right:10px;
-      background-position: -12px 0;
-    }
-
-    a:hover.slidesjs-next {
-      background-position: -12px -18px;
-    }
-
-    a.slidesjs-previous {
-      background-position: 0 0;
-    }
-
-    a:hover.slidesjs-previous {
-      background-position: 0 -18px;
-    }
-
-    a.slidesjs-play {
-      width:15px;
-      background-position: -25px 0;
-    }
-
-    a:hover.slidesjs-play {
-      background-position: -25px -18px;
-    }
-
-    a.slidesjs-stop {
-      width:18px;
-      background-position: -41px 0;
-    }
-
-    a:hover.slidesjs-stop {
-      background-position: -41px -18px;
-    }
-
-    .slidesjs-pagination {
-      margin: 7px 0 0;
-      float: right;
-      list-style: none;
-    }
-
-    .slidesjs-pagination li {
-      float: left;
-      margin: 0 1px;
-    }
-
-    .slidesjs-pagination li a {
-      display: block;
-      width: 13px;
-      height: 0;
-      padding-top: 13px;
-      background-image: url(img/pagination.png);
-      background-position: 0 0;
-      float: left;
-      overflow: hidden;
-    }
-
-    .slidesjs-pagination li a.active,
-    .slidesjs-pagination li a:hover.active {
-      background-position: 0 -13px
-    }
-
-    .slidesjs-pagination li a:hover {
-      background-position: 0 -26px
-    }
-
-    #slides a:link,
-    #slides a:visited {
-      color: #333
-    }
-
-    #slides a:hover,
-    #slides a:active {
-      color: #9e2020
-    }
-
-    .navbar {
-      overflow: hidden
-    }
-  </style>
-  <!-- End SlidesJS Optional-->
-
-  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
-  <style>
-    #slides {
-      display: none
-    }
-
-    .container {
-      margin: 0 auto
-    }
-
-    /* For tablets & smart phones */
-    @media (max-width: 767px) {
-      body {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-      .container {
-        width: auto
-      }
-    }
-
-    /* For smartphones */
-    @media (max-width: 480px) {
-      .container {
-        width: auto
-      }
-    }
-
-    /* For smaller displays like laptops */
-    @media (min-width: 768px) and (max-width: 979px) {
-      .container {
-        width: 724px
-      }
-    }
-
-    /* For larger displays */
-    @media (min-width: 1200px) {
-      .container {
-        width: 1170px
-      }
-    }
-  </style>
-  <!-- SlidesJS Required: -->
-
-
-
-
-
-
-
-
-
-
 <body>
 
 
-<!-- begin [HEADER] -->
-<div id="header">
-	<div class="container">
 
-
-		<!-- begin [HEADER LOGO] -->
-		<div class="header-logo"><a href="#"><img src="images/grundstein.jpg"></a></div>
-		<!-- end [HEADER LOGO] -->
-
-
-		<!-- begin [HEADER NAVIGATION] -->
-		<div class="header-navigation">
-			<ul>
-				<li class="selected"><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+	<!-- begin [HEADER-TOP] -->
+	<section id="header-top">
+		<div class="container">
+			<div class="row">
+				<div class="header-top-container">
+					<!-- begin [CONTACT] -->
+					<div class="col-lg-5 col-md-5 col-sm-5 col-xs-6">
+						<span class="fa fa-phone"></span> (02) 990-9601
+					</div>
+					<!-- end [CONTACT] -->
+					<!-- begin [FOLLOW] -->
+					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-6">
+						<ul>
+							<li><a href="#" class="fa fa-facebook"></a></li>
+							<li><a href="#" class="fa fa-twitter"></a></li>
+							<li><a href="#" class="fa fa-instagram"></a></li>
+							<li><a href="#" class="fa fa-youtube"></a></li>
+						</ul>
+					</div>
+					<!-- end [FOLLOW] -->
+				</div>
+			</div>
 		</div>
-		<!-- end [HEADER NAVIGATION] -->
+	</section>
+	<!-- end [HEADER-TOP] -->
 
 
-		<!-- begin [HEADER-FOLLOW] -->
-		<div class="header-follow">
-			<a href="#"><img src="images/socialmedia.png"></a>
+
+
+	<!-- begin [HEADER-MAIN] -->
+	<section id="header-main">
+		<div class="container">
+			<div class="row">
+				<!-- begin [LOGO] -->
+				<div class="col-lg-5 col-md-5 col-sm-8 col-xs-8 logo">
+					<a href="#">
+						<img src="images/logo-horizontal.png" class="logo-color img-responsive">
+						<img src="images/logo-horizontal-white.png" class="logo-white img-responsive">
+					</a>
+				</div>
+				<!-- end [LOGO] -->
+				<!-- begin [NAVIGATION] -->
+				<div class="col-lg-7 col-md-7 hidden-sm hidden-xs navigation">
+					<ul>
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Projects</a></li>
+						<li><a href="#">Equipments</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+				<!-- end [NAVIGATION] -->
+			</div>
 		</div>
-		<!-- end [HEADER-FOLLOW] -->
+	</section>
+	<!-- end [HEADER-MAIN] -->
 
 
-		<!-- begin [HEADER CONTACT] -->
-		<div class="header-contact">
-			<ul>
-				<li class="header-contact-phone">(02) 72498389</li>
-				<li class="header-contact-mail"><a href="#">grundsteincorpo@yahoo.com</a></li>
-			</ul>
+
+
+	<!-- begin [SLIDER] -->
+	<section id="slider">
+		<div class="home-pattern"></div>
+		<div id="main-carousel" class="carousel slide" data-ride="carousel"> 
+			<ol class="carousel-indicators">
+				<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#main-carousel" data-slide-to="1"></li>
+				<li data-target="#main-carousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active" style="background-image: url(images/slider/slide3.jpg)"> 
+					<div class="carousel-caption"> 
+						<div> 
+							<h2 class="heading animated bounceInDown">'Himu' Onepage HTML Template</h2> 
+							<p class="animated bounceInUp">Fully Professional one page template</p> 
+							<a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a> 
+						</div> 
+					</div> 
+				</div>
+				<div class="item" style="background-image: url(images/slider/slide2.jpg)"> 
+					<div class="carousel-caption"> <div> 
+						<h2 class="heading animated bounceInDown">Get All in Onepage</h2> 
+						<p class="animated bounceInUp">Everything is outstanding </p> <a class="btn btn-default slider-btn animated fadeIn" href="#">Get Started</a> 
+					</div> 
+				</div> 
+			</div> 
+			<div class="item" style="background-image: url(images/slider/slide1.jpg)"> 
+				<div class="carousel-caption"> 
+					<div> 
+						<h2 class="heading animated bounceInRight">Fully Responsive Template</h2> 
+						<p class="animated bounceInLeft">100% Responsive HTML template</p> 
+						<a class="btn btn-default slider-btn animated bounceInUp" href="#">Get Started</a> 
+					</div> 
+				</div> 
+			</div>
 		</div>
-		<!-- end [HEADER CONTACT] -->
+			<a class="carousel-left member-carousel-control hidden-xs" href="#main-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+			<a class="carousel-right member-carousel-control hidden-xs" href="#main-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
+		</div> 
+	</section>
+	<!-- end [SLIDER] -->
 
 
-	</div>
-</div>
-<!-- end [HEADER] -->
 
 
-
-<!-- begin [SLIDESHOW] -->
-<div id="slideshow">
-	<div class="container">
-		<!-- SAMPLE -->
-		<div id="slides">
-			<img src="images/slide1.jpg" />
-			<img src="images/slide2.jpg" />
+	<!-- begin [MENU] -->
+	<section id="menu">
+		<div class="container">
+			<div class="row">
+				<div class="menu-container text-center">
+					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 menu-item">
+						<div><span class="fa fa-building fa-2x"></span></div>
+						<h5>Projects</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+						<div><a href="#" class="btn btn-warning">Read More</a></div>
+						<br class="visible-md visible-sm visible-xs">
+						<br class="visible-md visible-sm visible-xs">
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 menu-item">
+						<div><span class="fa fa-users fa-2x"></span></div>
+						<h5>Our Team</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+						<div><a href="#" class="btn btn-warning">View Projects</a></div>
+						<br class="visible-md visible-sm visible-xs">
+						<br class="visible-md visible-sm visible-xs">
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 menu-item">
+						<div><span class="fa fa-question fa-2x"></span></div>
+						<h5>Why Choose Us?</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+						<div><a href="#" class="btn btn-warning">Learn More</a></div>
+						<br class="visible-sm visible-xs">
+						<br class="visible-sm visible-xs">
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 menu-item">
+						<div><span class="fa fa-comment fa-2x"></span></div>
+						<h5>Inquire</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+						<div><a href="#" class="btn btn-warning">Contact Us</a></div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
-<!-- end [SLIDESHOW] -->
+	</section>
+	<!-- end [MENU] -->
 
 
 
-
-<!-- begin [CONTENT] -->
-<div class="content">
-	<div class="container">
-		<img src="images/content1.png" />
-	</div>
-</div>
-
-
-<div class="content">
-	<div class="container">
-		<img src="images/content2.png" />
-	</div>
-</div>
-
-<div class="content">
-	<div class="container">
-		<img src="images/content3.png" />
-	</div>
-</div>
-
-<div class="content">
-	<div class="container">
-		<img src="images/content4.png" />
-	</div>
-</div>
-<!-- end [CONTENT] -->
+	<!-- begin [BORDER] -->
+	<div class="container"><hr class="hr1" /><hr class="hr2" /></div>
+	<!-- end [BORDER] -->
 
 
 
+	<!-- begin [CONTENT 1] -->
+	<section class="content-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<h1>Welcome</h1>
+					<h5 class="text-darkgray">Grundstein : Construction &amp; Development</h5>
+					<br />
+					<p><span class="bold-text">Lorem ipsum dolor sit amet</span>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<ul class="tab-md">
+						<li><span class="fa fa-check"></span> Lorem ipsum dolor sit amet.</li>
+						<li><span class="fa fa-check"></span> Consectetur adipiscing elit, sed do eiusmod.</li>
+						<li><span class="fa fa-check"></span> Duis aute irure dolor in reprehenderit.</li>
+						<li><span class="fa fa-check"></span> Ut enim ad minim veniam.</li>
+					</ul>
+					<br />
+					<div>
+						<a href="#" class="btn btn-warning">Learn More</a>
+						<a href="#" class="btn btn-danger">Inquire Now</a>
+					</div>
+					<br class="visible-sm visible-xs" />
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
+					<div><img src="images/single-floor-plan.png" class="img-responsive" /></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end [CONTENT 1] -->
 
-<!-- begin [FOOTER] -->
-<div id="footer">
-	<div class="container">
-		<img src="images/footer.png">
-	</div>
-</div>
-<!-- end [FOOTER] -->
-!-- SlidesJS Required: Link to jQuery -->
-  <script src="js/jquery-1.9.1.min.js"></script>
-  <!-- End SlidesJS Required -->
 
-  <!-- SlidesJS Required: Link to jquery.slides.js -->
-  <script src="js/jquery.slides.min.js"></script>
-  <!-- End SlidesJS Required -->
 
-  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-  <script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 1170,
-        height: 600,
-        play: {
-          active: true,
-          auto: true,
-          interval: 3000,
-          swap: true
-        }
-      });
-    });
-  </script>
+	<!-- begin [CONTENT 2] -->
+	<section class="content-gray">
+		<div class="container">
+			<div class="row text-center">
+				<h3>OUR RECENT <span class="bold-text">PROJECTS</span></h3>
+				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+				<br /><br />
+			</div>
+		</div>
+
+		<!-- begin [RECENTWORKS THUMBNAILS] -->
+		<div class="row text-center">
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 recentwork">
+				<div class="overlay">
+					<div class="overlay-content">
+						<h6>Project 1</h6>
+						<br />
+						<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+						<br />
+						<div>
+							<a href="#" class="btn btn-warning"><span class="fa fa-search"></span> read more</a>
+							<a href="#" class="btn btn-danger"><span class="fa fa-star"></span> view all</a>
+						</div>
+					</div>
+				</div>
+				<div><img src="images/projects/01.jpg" /></div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 recentwork">
+				<div class="overlay">
+					<div class="overlay-content">
+						<h6>Project 2</h6>
+						<br />
+						<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+						<br />
+						<div>
+							<a href="#" class="btn btn-warning"><span class="fa fa-search"></span> read more</a>
+							<a href="#" class="btn btn-danger"><span class="fa fa-star"></span> view all</a>
+						</div>
+					</div>
+				</div>
+				<div><img src="images/projects/02.jpg" /></div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 recentwork">
+				<div class="overlay">
+					<div class="overlay-content">
+						<h6>Project 3</h6>
+						<br />
+						<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+						<br />
+						<div>
+							<a href="#" class="btn btn-warning"><span class="fa fa-search"></span> read more</a>
+							<a href="#" class="btn btn-danger"><span class="fa fa-star"></span> view all</a>
+						</div>
+					</div>
+				</div>
+				<div><img src="images/projects/03.jpg" /></div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 recentwork">
+				<div class="overlay">
+					<div class="overlay-content">
+						<h6>Project 4</h6>
+						<br />
+						<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+						<br />
+						<div>
+							<a href="#" class="btn btn-warning"><span class="fa fa-search"></span> read more</a>
+							<a href="#" class="btn btn-danger"><span class="fa fa-star"></span> view all</a>
+						</div>
+					</div>
+				</div>
+				<div><img src="images/projects/04.jpg" /></div>
+			</div>
+		</div>
+		<!-- end [RECENTWORKS THUMBNAILS] -->
+
+		<div class="container">
+			<div class="row text-center">
+				<br /><br />
+				<hr class="hr1" /><hr class="hr2" />
+				<br /><br />
+				<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+				<br />
+				<div><a href="#" class="btn btn-danger">View All Projects</a></div>
+			</div>
+		</div>
+	</section>
+	<!-- end [CONTENT 2] -->
+
+
+
+	<!-- begin [CONTENT 3] -->
+	<section class="content-brown">
+		<div class="container">
+			<div class="row follow text-center">
+				<h3>LIKE OUR WORK? <span class="bold-text">STAY CONNECTED</span></h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+				<ul>
+					<li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
+					<li><a href="#"><span class="fa fa-twitter-square"></span></a></li>
+					<li><a href="#"><span class="fa fa-instagram"></span></a></li>
+					<li><a href="#"><span class="fa fa-youtube-square"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- end [CONTENT 3] -->
+
+
+
+	<!-- begin [CONTENT 4] -->
+	<section class="content-gray">
+		<div class="container">
+			<div class="row">
+				LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT.
+			</div>
+		</div>
+	</section>
+	<!-- end [CONTENT 4] -->
+
+
+
+	<!-- begin [CONTENT 5] -->
+	<section class="content-white">
+		<div class="container">
+			<div class="row">
+				LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT.
+			</div>
+		</div>
+	</section>
+	<!-- end [CONTENT 5] -->
+
+
+
+	<!-- begin [BORDER] -->
+	<div class="container"><hr class="hr1" /><hr class="hr2" /></div>
+	<!-- end [BORDER] -->
+
+
+
+	<!-- begin [CONTENT 5] -->
+	<section class="content-white">
+		<div class="container">
+			<div class="row">
+				LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT.
+			</div>
+		</div>
+	</section>
+	<!-- end [CONTENT 5] -->
+
+
+
+	<!-- begin [JAVASCRIPT] -->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script> 
+	<!-- end [JAVASCRIPT] -->
+
 
 
 </body>
