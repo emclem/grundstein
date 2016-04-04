@@ -17,4 +17,4 @@ $('#slider .carousel-inner .item, #slider .video-container').css('height',slideH
 
 $(window).resize(function(){'use strict',
 	$('#slider .carousel-inner .item, #slider .video-container').css('height',slideHeight);
-});x
+});

@@ -63,11 +63,61 @@ a {
 
 
 
+// RESPONSIVE MENU
+$responsivemenuwidth: 80%;
+.responsivemenu {
+	@include transition(400ms);
+	position: fixed;
+	z-index: 9999999999;
+	height: 100%;
+	overflow: hidden;
+	background: rgba($darkergray, 0.9);
+	top: 0px;
+	right: -$responsivemenuwidth;
+	width: $responsivemenuwidth;
+	font-size: 2em;
+	.backbutton {
+		width: 100%;
+		text-align: left;
+		border-radius: 0px;
+		-o-border-radius: 0px;
+		-ms-border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		padding: 15px 0px 15px 60px;
+		font-size: 1.2em;
+	}
+	ul {
+		@include clearspace();
+		list-style: none;
+		li {
+			border-bottom: solid 1px rgba(#000, 0.3);
+			a {
+				@include transition(400ms);
+				font-size: 1.2em;
+				padding: 45px 65px;
+				display: block;
+				color: #FFF;
+				&:hover { background: rgba(#000, 1); color: #FFF; }
+				&.active { background: #FFF; color: $darkgray; }
+			}
+		}
+	}
+}
+.responsivemenu-clicked {
+	right: 0%;
+}
+.responsive-burger-button {
+
+}
+
+
 
 // HEADER
 $header-top-height: 30px;
 $header-main-height: 90px;
-#header-top {
+.header-top {
+	@include transition(300ms);
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -83,7 +133,7 @@ $header-main-height: 90px;
 	}
 	.fa-phone {
 		@include round(5px);
-		@include transition(200ms);
+		@include transition(300ms);
 		margin-top: 3px;
 		margin-right: 3px;
 		width: $header-top-height - 7px;
@@ -118,7 +168,11 @@ $header-main-height: 90px;
 		}
 	}
 }
-#header-main {
+.header-top-scrolled {
+	top: 0px - $header-top-height;
+}
+.header-main {
+	@include transition(300ms);
 	@include shadow(25px);
 	position: fixed;
 	top: $header-top-height;
@@ -129,14 +183,17 @@ $header-main-height: 90px;
 	color: $brown;
 	overflow: hidden;
 	z-index: 999999999;
+	font-size: 1em;
 	.logo {
 		position: relative;
 		.logo-color {
+			@include transition(250ms);
 			position: absolute;
 			top: 17px;
 			max-height: $header-main-height - 35px;
 		}
 		.logo-white {
+			@include transition(250ms);
 			position: absolute;
 			top: -100px;
 			max-height: $header-main-height - 35px;
@@ -150,6 +207,7 @@ $header-main-height: 90px;
 				a {
 					display: block;
 					padding: 0px 20px;
+					line-height: $header-main-height;
 					&:hover {
 						background: #FFF;
 						line-height: $header-main-height + 10px;
@@ -166,6 +224,47 @@ $header-main-height: 90px;
 		}
 	}
 }
+.header-main-scrolled {
+	top: 0;
+	background: rgba($darkergray, 0.95);
+	height: $header-main-height - 30px;
+	line-height: $header-main-height - 30px;
+	font-size: 0.8em;
+	.logo {
+		.logo-color {
+			top: -100px;
+			max-height: $header-main-height - 50px;
+		}
+		.logo-white {
+			position: absolute;
+			top: 10px;
+			max-height: $header-main-height - 50px;
+		}
+	}
+	.navigation {
+		ul {
+			li {
+				a {
+					padding: 0px 18px;
+					line-height: $header-main-height - 30px;
+					color: #FFF !important;
+					&:hover {
+						color: $red !important;
+						background: #FFF;
+						line-height: $header-main-height - 20px;
+					}
+				}
+				&.active {
+					a {
+						background: $red;
+						color: #FFF;
+						line-height: $header-main-height - 20px;
+					}
+				}
+			}
+		}
+	}
+}
 
 
 
@@ -176,8 +275,11 @@ $header-main-height: 90px;
 	.slider-btn {
 		background: #fc7700;
 		color: #FFF;
-		-webkit-box-shadow: inset 0 0 0 2px #fc7700;
 		box-shadow: inset 0 0 0 2px #fc7700;
+		-webkit-box-shadow: inset 0 0 0 2px #fc7700;
+		-moz-box-shadow: inset 0 0 0 2px #fc7700;
+		-ms-box-shadow: inset 0 0 0 2px #fc7700;
+		-o-box-shadow: inset 0 0 0 2px #fc7700;
 		text-transform: uppercase;
 		width: 190px;
 		text-align: center;
@@ -194,8 +296,11 @@ $header-main-height: 90px;
 		transition: all 0.3s ease 0s;
 		&:hover {
 			background-color:#43484E;
-			-webkit-box-shadow: inset 0 0 0 2px #43484E;
 			box-shadow: inset 0 0 0 2px #43484E;
+			-webkit-box-shadow: inset 0 0 0 2px #43484E;
+			-moz-box-shadow: inset 0 0 0 2px #43484E;
+			-ms-box-shadow: inset 0 0 0 2px #43484E;
+			-o-box-shadow: inset 0 0 0 2px #43484E;
 			color:#fff
 		}
 	}
@@ -208,18 +313,17 @@ $header-main-height: 90px;
 				background-repeat:no-repeat;
 			}
 			h2 {
-				color: #f6f6f6;
+				color: #FFF;
 				display: inline-block;
 				font-size: 55px;
 				font-weight: 800;
-				margin-bottom: 40px;
-				text-shadow: none;
+				margin-bottom: 0px;
 				text-transform: uppercase;
 				span {
 	  				color:#7ab700;
 				}
 				p {
-					color: #f6f6f6;
+					color: #FFF;
 					font-size: 24px;
 					font-weight: 300;
 					margin-bottom: 59px;
@@ -353,7 +457,7 @@ $content-spacer: 100px;
 // MENU
 $icon-dimension: 150px;
 #menu {
-	color: $lightwood;
+	color: $wood;
 	padding: $content-spacer 0px;
 	.menu-container {
 		padding: 0px 50px;
@@ -428,6 +532,93 @@ $icon-dimension: 150px;
 	}
 }
 
+
+// CONTACT
+.contact-form {
+	.input-field {
+		margin-bottom: 10px;
+	}
+	.form-control {
+		border: 1px solid #ececec;
+		border-radius: 0;
+		box-shadow: none;
+		color: #818181;
+		font-size: 16px;
+		height: 50px;
+	}
+	textarea.form-control {
+		width: 100%;
+		height: 165px;
+	}
+}
+.contact-details {
+	h3 {
+		border-bottom: 1px solid #008ecc;
+		font-weight: 700;
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		text-transform: uppercase;
+	}
+	p {
+		line-height: 30px;
+		i {
+			margin-right: 10px;
+		}
+	}
+	span {
+		display: block;
+		margin-left: 24px;
+	}
+}
+
+
+
+// FOOTER
+$footer-text-color: $lightergray + 30;
+.footer {
+	color: $footer-text-color;
+	.footer-logo {
+		img {
+			margin: 0 auto;
+			max-width: 130px;
+		}
+	}
+	p {
+		padding: 50px 20px;
+		margin: 0 auto;
+		max-width: 900px;
+	}
+	.footer-follow {
+		text-align: center;
+		li {
+			display: inline-block;
+			a {
+				@include round(50%);
+				display: block;
+				background: #F90;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				color: $footer-text-color;
+				background: #FFF;
+				border: solid 1px $footer-text-color;
+				&:hover {
+					border-color: #FFF;
+					&.fa-facebook { color: #FFF; background: $color-facebook; }
+					&.fa-twitter { color: #FFF; background: $color-twitter; }
+					&.fa-instagram { color: #FFF; background: $color-instagram; }
+					&.fa-youtube { color: #FFF; background: $color-youtube; }
+				}
+			}
+		}
+	}
+}
+.footer-bottom {
+	color: #FFF;
+	background: $brown;
+	font-size: 0.85em;
+	padding: 30px 30px;
+}
 
 
 
