@@ -2,7 +2,7 @@
    Component: Typography
  ========================================================================== */
 @font-face {
-	font-family: 'Campton Bold', Arial;
+	font-family: 'Campton Bold';
 	src: url('../fonts/Campton-BoldDEMO.otf');
 }
 @font-face {
