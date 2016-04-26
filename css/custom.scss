@@ -652,6 +652,21 @@ $icon-dimension: 150px;
 		.project-overlay { top: 0; }
 	}
 }
+.project-featured {
+	padding: 0px !important;
+	margin: 0px !important;
+	display: block;
+	img {
+		@include transition(300ms);
+		margin: 0 auto;
+		padding: 0;
+		border: solid 3px #FFF;
+		&:hover {
+			border-color: $orange;
+		}
+	}
+}
+
 
 
 // FOOTER
