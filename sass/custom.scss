@@ -577,6 +577,13 @@ $icon-dimension: 150px;
 }
 
 
+// EQUIPMENTS
+.equipments {
+	@extend %clearspace-extend;
+	img { width: 100%; }
+}
+
+
 // CONTACT
 .contact-form {
 	.input-field {
@@ -613,6 +620,22 @@ $icon-dimension: 150px;
 		display: block;
 		margin-left: 24px;
 	}
+}
+
+
+
+// GOOGLE MAP
+.googlemap-wrapper {
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+.map-canvas {
+	height: 380px;
+	padding: 0px;
+	margin: 0px;
+	border: 10px solid #FFF;
 }
 
 
@@ -758,9 +781,3 @@ $footer-text-color: $lightergray + 30;
 	.header-top { .header-top-container { padding: 0px; } }
 	.project { .project-overlay { .sthumb { img { max-width: 75px; } } } }
 }
-
-
-
-
-
-
